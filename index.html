@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>masamad</title>
+<title>Md. Portfolio — Civil Engineer & Sales/Marketing Professional | Bangladesh</title>
 <meta name="description" content="Civil Engineer with 10+ years in the Cement Industry, now leading Sales & Marketing. Dealer management, market development, and web-app automation portfolio based in Bangladesh.">
 <meta name="keywords" content="Civil Engineer, Cement Industry, Sales and Marketing, Dealer Management, Bangladesh, Firebase Developer">
 <meta name="author" content="Your Name">
@@ -44,7 +44,7 @@
   --orange-dim:rgba(255,122,41,.15);
   --glass:rgba(255,255,255,.055);
   --glass-brd:rgba(255,255,255,.12);
-  --shadow:0 20px 60px -20px rgba(0,0,0,.55);
+  --shadow:0 16px 40px -22px rgba(0,0,0,.45);
   --radius:18px;
   --radius-sm:10px;
   --ff-display:'Space Grotesk',sans-serif;
@@ -70,7 +70,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
@@ -91,33 +91,33 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 input,textarea{font-family:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-section{position:relative;padding:120px 0}
-@media(max-width:768px){section{padding:80px 0}}
+section{position:relative;padding:90px 0}
+@media(max-width:768px){section{padding:56px 0}}
 
 /* eyebrow / sheet-label pattern — used consistently as the structural signature */
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;
-  font-family:var(--ff-mono);font-size:.75rem;letter-spacing:.14em;
+  font-family:var(--ff-mono);font-size:.72rem;font-weight:500;letter-spacing:.12em;
   color:var(--orange);text-transform:uppercase;margin-bottom:16px;
 }
 .eyebrow::before{content:'';width:22px;height:1px;background:var(--orange)}
-.section-head{max-width:640px;margin-bottom:64px}
+.section-head{max-width:640px;margin-bottom:44px}
 .section-head h2{font-family:var(--ff-display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;letter-spacing:-.02em}
 .section-head p{color:var(--muted);margin-top:14px;font-size:1.02rem}
 
 /* corner brackets — drafting-sheet motif reused on cards */
 .blueprint-card{position:relative;}
 .blueprint-card::before,.blueprint-card::after{
-  content:'';position:absolute;width:14px;height:14px;
+  content:'';position:absolute;width:10px;height:10px;
   border-top:1.5px solid var(--orange-soft);border-left:1.5px solid var(--orange-soft);
-  top:10px;left:10px;opacity:.55;transition:opacity .3s;
+  top:10px;left:10px;opacity:0;transition:opacity .35s;
 }
 .blueprint-card::after{
   top:auto;left:auto;bottom:10px;right:10px;
   border-top:none;border-left:none;
   border-bottom:1.5px solid var(--orange-soft);border-right:1.5px solid var(--orange-soft);
 }
-.blueprint-card:hover::before,.blueprint-card:hover::after{opacity:1}
+.blueprint-card:hover::before,.blueprint-card:hover::after{opacity:.7}
 
 /* glass card base */
 .glass{
@@ -131,8 +131,8 @@ section{position:relative;padding:120px 0}
 
 /* buttons */
 .btn{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:14px 26px;border-radius:100px;font-weight:600;font-size:.92rem;
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 24px;border-radius:100px;font-weight:600;font-size:.92rem;
   transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s;
   white-space:nowrap;
 }
@@ -179,11 +179,11 @@ header.scrolled{
   border-bottom:1px solid var(--line);
 }
 .nav-wrap{width:100%;display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.logo{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;display:flex;align-items:center;gap:8px}
+.logo{font-family:var(--ff-display);font-weight:600;font-size:1.2rem;display:flex;align-items:center;gap:8px}
 .logo .dot{color:var(--orange)}
 nav ul{display:flex;gap:2px;align-items:center}
 nav a{
-  padding:10px 16px;font-size:.88rem;font-weight:500;color:var(--muted);
+  padding:10px 18px;font-size:.92rem;font-weight:500;color:var(--muted);
   border-radius:100px;transition:color .25s,background .25s;position:relative;
 }
 nav a:hover{color:var(--ink)}
@@ -209,7 +209,7 @@ nav a.active{color:var(--orange);background:var(--orange-dim)}
   }
   nav.open{transform:translateX(0)}
   nav ul{flex-direction:column;width:100%;gap:6px}
-  nav a{display:block;padding:16px 18px;font-size:1.02rem;border-bottom:1px solid var(--line);border-radius:8px}
+  nav a{display:block;padding:16px 18px;font-size:1.05rem;font-weight:600;border-bottom:1px solid var(--line);border-radius:8px}
   #hamburger{display:flex}
 }
 
@@ -223,8 +223,9 @@ nav a.active{color:var(--orange);background:var(--orange-dim)}
   background-image:
     linear-gradient(var(--line) 1px,transparent 1px),
     linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:56px 56px;
-  mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,black 30%,transparent 90%);
+  background-size:72px 72px;
+  opacity:.6;
+  mask-image:radial-gradient(ellipse 70% 55% at 50% 25%,black 20%,transparent 85%);
 }
 .hero-glow{
   position:absolute;width:600px;height:600px;border-radius:50%;
@@ -354,7 +355,7 @@ nav a.active{color:var(--orange);background:var(--orange-dim)}
 }
 .skill-card:hover{transform:translateY(-6px);border-color:var(--orange)}
 .skill-card i{font-size:1.4rem;color:var(--orange);margin-bottom:14px;display:block}
-.skill-card h4{font-family:var(--ff-display);font-size:.98rem;margin-bottom:10px}
+.skill-card h4{font-family:var(--ff-display);font-size:1rem;font-weight:600;margin-bottom:10px}
 .skill-bar{height:5px;border-radius:6px;background:var(--line);overflow:hidden}
 .skill-bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--orange),var(--orange-soft));width:0;transition:width 1.4s var(--ease)}
 .skill-pct{font-family:var(--ff-mono);font-size:.7rem;color:var(--muted);margin-top:8px;display:block}
@@ -372,14 +373,44 @@ nav a.active{color:var(--orange);background:var(--orange-dim)}
 .project-thumb::after{
   content:'';position:absolute;inset:0;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:20px 20px;opacity:.5;
+  background-size:24px 24px;opacity:.25;
 }
 .project-body{padding:24px;display:flex;flex-direction:column;gap:12px;flex:1}
-.project-body h3{font-family:var(--ff-display);font-size:1.08rem}
+.project-body h3{font-family:var(--ff-display);font-size:1.1rem;font-weight:600}
 .project-body p{color:var(--muted);font-size:.9rem;flex:1}
 .tech-tags{display:flex;flex-wrap:wrap;gap:7px}
 .tech-tags span{font-size:.68rem;font-family:var(--ff-mono);padding:4px 9px;border-radius:6px;background:var(--glass);border:1px solid var(--glass-brd);color:var(--muted)}
 .project-actions{display:flex;gap:10px;margin-top:6px}
+
+/* ============ GALLERY CAROUSEL ============ */
+.gallery-carousel{position:relative;overflow:hidden;padding:0}
+.carousel-track{display:flex;transition:transform .55s var(--ease)}
+.carousel-slide{min-width:100%;flex-shrink:0}
+.gallery-img{
+  height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  background:linear-gradient(135deg,var(--navy-800),var(--navy-700));
+  position:relative;overflow:hidden;
+}
+.gallery-img::after{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:28px 28px;opacity:.3;
+}
+.gallery-img i{font-size:2.2rem;color:var(--orange);position:relative;z-index:1}
+.gallery-img span{color:var(--muted);font-size:.85rem;position:relative;z-index:1;text-align:center;padding:0 20px}
+@media(max-width:600px){.gallery-img{height:260px}}
+.carousel-btn{
+  position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;z-index:2;
+  background:var(--glass);border:1px solid var(--glass-brd);backdrop-filter:blur(10px);
+  color:var(--ink);transition:.3s;
+}
+.carousel-btn:hover{background:var(--orange);color:#0a1128;border-color:var(--orange)}
+.carousel-btn.prev{left:16px}
+.carousel-btn.next{right:16px}
+.carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:22px}
+.carousel-dots .dot{width:9px;height:9px;border-radius:50%;background:var(--glass-brd);border:none;cursor:pointer;transition:.3s;padding:0}
+.carousel-dots .dot.active{background:var(--orange);width:24px;border-radius:6px}
 
 /* ============ STATS ============ */
 .stats-section{
@@ -482,6 +513,23 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
 .center{text-align:center}
 .mono{font-family:var(--ff-mono)}
 ::selection{background:var(--orange);color:#0a1128}
+
+/* ---- Mobile overflow-safety net: fixed min-widths in the grids above can
+   force horizontal page scroll on narrow phones. Below 560px we switch to
+   explicit fr-based columns so nothing can ever push past the viewport. ---- */
+@media(max-width:560px){
+  body{width:100%}
+  .about-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .projects-grid{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr}
+  .media-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-cta,.hero-socials{gap:10px}
+  .badge-float{left:0;bottom:-4%;padding:10px 12px}
+  section{padding:44px 0}
+  .section-head{margin-bottom:32px}
+}
 </style>
 </head>
 <body>
@@ -507,6 +555,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
         <li><a href="#media" class="nav-link">Media</a></li>
         <li><a href="#resume" class="nav-link">Resume</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -525,8 +574,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="container hero-inner">
     <div class="reveal in">
-      <br>
-      <h1>Hi, i am<span> Abdus Samad</span><br>Welcome to my personal portfolio website</h1>
+      <div class="hero-eyebrow">Sheet S.01 — Profile</div>
+      <h1>Md. <span>Your Name</span><br>Civil Engineer, Reworked<br>for Sales &amp; Marketing.</h1>
       <div class="typed-wrap"><span id="typed"></span><span class="cursor">&nbsp;</span></div>
       <p class="lede">10+ years across the cement industry — from reading structural drawings on site to reading dealer territories on a map. I build the deals, the relationships, and occasionally the web app that tracks them.</p>
       <div class="hero-cta">
@@ -535,7 +584,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
       </div>
       <div class="hero-socials">
         <a href="#" class="social-ico" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61576009866624" class="social-ico" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-ico" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#" class="social-ico" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="#" class="social-ico" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         <a href="#" class="social-ico" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
@@ -548,6 +597,10 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
           <span class="initials">YN</span>
         </div>
       </div>
+      <div class="badge-float glass blueprint-card">
+        <i class="fa-solid fa-industry"></i>
+        <div><span class="num">10+</span><br><span class="lbl">Years — Cement Industry</span></div>
+      </div>
     </div>
   </div>
   <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
@@ -556,6 +609,11 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
 <!-- ================= ABOUT ================= -->
 <section id="about">
   <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Sheet S.02 — About</div>
+      <h2>Built on-site. Sold across the country.</h2>
+      <p>A short profile of the engineer-turned-marketer behind this page.</p>
+    </div>
     <div class="about-grid">
       <div class="about-intro glass blueprint-card reveal">
         <div class="about-intro-badge">BD<br>BASED</div>
@@ -572,11 +630,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
         <p>To be a trusted name at the intersection of engineering and market development — where technical know-how directly shapes stronger, smarter distribution networks.</p>
       </div>
       <div class="about-card glass blueprint-card reveal">
-        <i class="fa-solid fa-chart-line"></i>
-        <h3>Career Summary</h3>
-        <p>10+ years in the cement industry spanning dealer management, market development, and team leadership, layered with civil engineering fundamentals and modern automation tools.</p>
-      </div>
-      <div class="about-card glass blueprint-card reveal">
         <i class="fa-solid fa-flag-checkered"></i>
         <h3>Professional Goals</h3>
         <p>Grow into senior commercial leadership while continuing to ship practical web tools — Firebase, Sheets automation, and AI — that make sales teams faster and sharper.</p>
@@ -590,6 +643,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow">Sheet S.03 — Experience</div>
+      <h2>A decade on the field — literally and commercially.</h2>
+      <p>From reading blueprints to reading market territory.</p>
     </div>
     <div class="timeline">
 
@@ -607,7 +662,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
         <div class="t-dot"><i class="fa-solid fa-check"></i></div>
         <div class="t-card glass blueprint-card">
           <span class="t-year mono">10+ YEARS</span>
-          <h3>Cement Sales & Marketing</h3>
+          <h3>Cement Sales &amp; Marketing</h3>
           <p>Long-term, hands-on presence in the cement industry — turning engineering credibility into commercial trust across a competitive market.</p>
           <div class="t-tags"><span>Sales Strategy</span><span>Brand Positioning</span></div>
         </div>
@@ -660,16 +715,26 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
 <!-- ================= SKILLS ================= -->
 <section id="skills">
   <div class="container">
-    
+    <div class="section-head reveal">
+      <div class="eyebrow">Sheet S.04 — Skills</div>
+      <h2>Two toolkits, one working method.</h2>
+      <p>Engineering discipline, commercial instinct, and a growing set of automation tools.</p>
+    </div>
     <div class="skills-grid" id="skillsGrid">
       <!-- populated with data-skill cards below -->
-      <div class="skill-card glass blueprint-card reveal" data-pct="96"><i class="fa-solid fa-handshake"></i><h4>Sales & Marketing</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">96%</span></div>
+      <div class="skill-card glass blueprint-card reveal" data-pct="92"><i class="fa-solid fa-drafting-compass"></i><h4>Civil Engineering</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">92%</span></div>
+      <div class="skill-card glass blueprint-card reveal" data-pct="96"><i class="fa-solid fa-handshake"></i><h4>Sales &amp; Marketing</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">96%</span></div>
       <div class="skill-card glass blueprint-card reveal" data-pct="94"><i class="fa-solid fa-people-arrows"></i><h4>Dealer Management</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">94%</span></div>
       <div class="skill-card glass blueprint-card reveal" data-pct="90"><i class="fa-solid fa-chart-simple"></i><h4>Business Development</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">90%</span></div>
       <div class="skill-card glass blueprint-card reveal" data-pct="88"><i class="fa-solid fa-diagram-project"></i><h4>Project Management</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">88%</span></div>
-      <div class="skill-card glass blueprint-card reveal" data-pct="92"><i class="fa-solid fa-drafting-compass"></i><h4>Civil Engineering</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">92%</span></div>
       <div class="skill-card glass blueprint-card reveal" data-pct="85"><i class="fa-solid fa-ruler-combined"></i><h4>AutoCAD</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">85%</span></div>
       <div class="skill-card glass blueprint-card reveal" data-pct="93"><i class="fa-solid fa-file-excel"></i><h4>Excel</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">93%</span></div>
+      <div class="skill-card glass blueprint-card reveal" data-pct="90"><i class="fa-brands fa-google"></i><h4>Google Sheets</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">90%</span></div>
+      <div class="skill-card glass blueprint-card reveal" data-pct="80"><i class="fa-solid fa-fire"></i><h4>Firebase</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">80%</span></div>
+      <div class="skill-card glass blueprint-card reveal" data-pct="82"><i class="fa-brands fa-html5"></i><h4>HTML</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">82%</span></div>
+      <div class="skill-card glass blueprint-card reveal" data-pct="80"><i class="fa-brands fa-css3-alt"></i><h4>CSS</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">80%</span></div>
+      <div class="skill-card glass blueprint-card reveal" data-pct="75"><i class="fa-brands fa-js"></i><h4>JavaScript</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">75%</span></div>
+      <div class="skill-card glass blueprint-card reveal" data-pct="78"><i class="fa-solid fa-table-cells"></i><h4>AppSheet</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">78%</span></div>
       <div class="skill-card glass blueprint-card reveal" data-pct="85"><i class="fa-solid fa-robot"></i><h4>AI Tools</h4><div class="skill-bar"><div class="skill-bar-fill"></div></div><span class="skill-pct mono">85%</span></div>
     </div>
   </div>
@@ -830,11 +895,45 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
   </div>
 </section>
 
+<!-- ================= GALLERY (CAROUSEL) ================= -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Sheet S.07 — Gallery</div>
+      <h2>A quick look, one slide at a time.</h2>
+      <p>Site visits, dealer meets, and project snapshots — swipe or use the arrows. Replace each .gallery-img with your own &lt;img&gt; tag.</p>
+    </div>
+
+    <div class="gallery-carousel glass blueprint-card" id="galleryCarousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <div class="gallery-img"><i class="fa-solid fa-image"></i><span>Gallery Image 1 — replace with your photo</span></div>
+        </div>
+        <div class="carousel-slide">
+          <div class="gallery-img"><i class="fa-solid fa-image"></i><span>Gallery Image 2 — replace with your photo</span></div>
+        </div>
+        <div class="carousel-slide">
+          <div class="gallery-img"><i class="fa-solid fa-image"></i><span>Gallery Image 3 — replace with your photo</span></div>
+        </div>
+        <div class="carousel-slide">
+          <div class="gallery-img"><i class="fa-solid fa-image"></i><span>Gallery Image 4 — replace with your photo</span></div>
+        </div>
+        <div class="carousel-slide">
+          <div class="gallery-img"><i class="fa-solid fa-image"></i><span>Gallery Image 5 — replace with your photo</span></div>
+        </div>
+      </div>
+      <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="carousel-btn next" id="carouselNext" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
 <!-- ================= MEDIA ================= -->
 <section id="media" style="background:var(--navy-950)">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">Sheet S.07 — Media</div>
+      <div class="eyebrow">Sheet S.08 — Media</div>
       <h2>Find me across the web.</h2>
       <p>Follow along for insights on engineering, sales, and the tools in between.</p>
     </div>
@@ -851,7 +950,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
 <section id="resume">
   <div class="container">
     <div class="section-head center reveal" style="margin:0 auto 44px">
-      <div class="eyebrow" style="justify-content:center">Sheet S.08 — Resume</div>
+      <div class="eyebrow" style="justify-content:center">Sheet S.09 — Resume</div>
       <h2>Get the full record.</h2>
     </div>
     <div class="resume-card glass blueprint-card reveal">
@@ -867,7 +966,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
 <section id="contact" style="background:var(--navy-950)">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">Sheet S.09 — Contact</div>
+      <div class="eyebrow">Sheet S.10 — Contact</div>
       <h2>Let's talk business.</h2>
       <p>Open to partnerships, dealership opportunities, and collaboration on web-based sales tools.</p>
     </div>
@@ -875,17 +974,17 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
       <div class="contact-info glass blueprint-card reveal">
         <div class="contact-row">
           <i class="fa-solid fa-phone"></i>
-          <div><h4>Phone</h4><a href="tel:+8800000000000">+8801774226685</a></div>
+          <div><h4>Phone</h4><a href="tel:+8800000000000">+880 000 000 0000</a></div>
         </div>
         <div class="contact-row">
           <i class="fa-solid fa-envelope"></i>
-          <div><h4>Email</h4><a href="mailto:youremail@example.com">samad.ct.bpi@gmail.com</a></div>
+          <div><h4>Email</h4><a href="mailto:youremail@example.com">youremail@example.com</a></div>
         </div>
         <div class="contact-row">
           <i class="fa-solid fa-location-dot"></i>
-          <div><h4>Location</h4><p>Bogura, Bangladesh</p></div>
+          <div><h4>Location</h4><p>Bangladesh</p></div>
         </div>
-        <a href="https://wa.me/+8801774226685" target="_blank" class="btn btn-primary" style="width:fit-content"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+        <a href="https://wa.me/8800000000000" target="_blank" class="btn btn-primary" style="width:fit-content"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
         <div class="map-frame">
           <i class="fa-solid fa-map-location-dot"></i>
           <span class="mono" style="font-size:.75rem">MAP PLACEHOLDER — embed Google Maps iframe here</span>
@@ -916,7 +1015,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#home" class="logo">My<span class="dot">.</span>PORTFOLIO</a>
+        <a href="#home" class="logo">ENGR<span class="dot">.</span>PORTFOLIO</a>
         <p>Civil Engineer with 10+ years in the cement industry, now driving Sales &amp; Marketing growth from Bangladesh — with a side of web-app automation.</p>
       </div>
       <div class="footer-col">
@@ -926,6 +1025,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -940,7 +1040,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;background:var(--nav
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> masamad.com All rights reserved.</span>
+      <span>© <span id="year"></span> Your Name. All rights reserved.</span>
+      <span class="mono">Built &amp; hosted on Firebase</span>
     </div>
   </div>
 </footer>
@@ -1125,6 +1226,58 @@ document.addEventListener('DOMContentLoaded', function () {
     var body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
     window.location.href = 'mailto:youremail@example.com?subject=' + subject + '&body=' + body;
   });
+
+  /* ---------- Gallery carousel ---------- */
+  var track = document.getElementById('carouselTrack');
+  var dotsWrap = document.getElementById('carouselDots');
+  if (track) {
+    var slides = track.querySelectorAll('.carousel-slide');
+    var current = 0;
+    var autoplayTimer;
+
+    slides.forEach(function (_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', function () { goTo(i); resetAutoplay(); });
+      dotsWrap.appendChild(dot);
+    });
+    var dots = dotsWrap.querySelectorAll('.dot');
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+    }
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+    function resetAutoplay() {
+      clearInterval(autoplayTimer);
+      autoplayTimer = setInterval(next, 4500);
+    }
+
+    document.getElementById('carouselNext').addEventListener('click', function () { next(); resetAutoplay(); });
+    document.getElementById('carouselPrev').addEventListener('click', function () { prev(); resetAutoplay(); });
+
+    /* swipe support */
+    var startX = 0, isDragging = false;
+    track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; isDragging = true; }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      if (!isDragging) return;
+      var diff = e.changedTouches[0].clientX - startX;
+      if (diff > 50) prev();
+      else if (diff < -50) next();
+      isDragging = false;
+      resetAutoplay();
+    });
+
+    /* pause on hover (desktop) */
+    var carouselEl = document.getElementById('galleryCarousel');
+    carouselEl.addEventListener('mouseenter', function () { clearInterval(autoplayTimer); });
+    carouselEl.addEventListener('mouseleave', resetAutoplay);
+
+    resetAutoplay();
+  }
 
   /* initial calls */
   onScroll();
