@@ -168,13 +168,17 @@
             text-align: center;
         }
         .action-dropdown.profile-dropdown {
-            position: absolute;
-            top: 50%;
-            left: 100%;
-            transform: translateY(-50%);
+            /* ⚠️ আগে position:absolute + left:100% + transform ছিল, যা বাটনটাকে টেক্সটের
+               ডানে অনেক দূরে (কখনো পেজের বাইরে) ঠেলে দিত। আর ancestor-এ transform থাকলে
+               সেটা position:fixed চাইল্ড (পপআপ, নিচের toggleMenu() যা সেট করে)-এর জন্য
+               ভিউপোর্টের বদলে এই এলিমেন্টকেই রেফারেন্স ফ্রেম বানিয়ে ফেলত — ফলে JS-এর
+               অন-স্ক্রিন ক্ল্যাম্প হিসাব সঠিক হলেও পপআপ ভুল জায়গায় (পেজের বাইরে) বসত।
+               এখন এটা normal inline flow-তে টেক্সটের ঠিক পাশে বসে, কোনো transform নেই —
+               তাই position:fixed পপআপ সত্যিকারের ভিউপোর্ট অনুযায়ী সঠিক জায়গায় খোলে। */
+            position: static;
             flex-shrink: 0;
             margin: 0 0 0 2px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
         }
@@ -182,20 +186,6 @@
             font-size: 14px;
             padding: 4px 3px;
             opacity: 0.2;
-        }
-        /* ✅ প্রোফাইল (নাম/পদবি/এলাকা) থ্রি-ডট মেনু যেন পেজের ডানপাশে বাইরে চলে না গিয়ে
-           থ্রি-ডট বাটনের ঠিক নিচে খোলে — সাধারণ .dropdown-menu (ডানে/বামে খোলা) ও মোবাইল
-           মিডিয়া-কুয়েরির নিয়মকে ওভাররাইড করার জন্য বেশি স্পেসিফিসিটি দিয়ে লেখা হয়েছে */
-        .action-dropdown.profile-dropdown .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            bottom: auto;
-            left: 50%;
-            right: auto;
-            transform: translateX(-50%);
-            margin-top: 4px;
-            margin-right: 0;
-            min-width: 90px;
         }
 
         /* হোমে ফিরুন ব্যাক বার */
