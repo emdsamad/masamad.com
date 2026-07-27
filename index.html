@@ -183,6 +183,20 @@
             padding: 4px 3px;
             opacity: 0.2;
         }
+        /* ✅ প্রোফাইল (নাম/পদবি/এলাকা) থ্রি-ডট মেনু যেন পেজের ডানপাশে বাইরে চলে না গিয়ে
+           থ্রি-ডট বাটনের ঠিক নিচে খোলে — সাধারণ .dropdown-menu (ডানে/বামে খোলা) ও মোবাইল
+           মিডিয়া-কুয়েরির নিয়মকে ওভাররাইড করার জন্য বেশি স্পেসিফিসিটি দিয়ে লেখা হয়েছে */
+        .action-dropdown.profile-dropdown .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            bottom: auto;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            margin-top: 4px;
+            margin-right: 0;
+            min-width: 90px;
+        }
 
         /* হোমে ফিরুন ব্যাক বার */
         .page-back-bar {
@@ -4631,7 +4645,11 @@
         }
         const cbEl = document.getElementById('ledger-closing-balance');
         if (cbEl) {
-            cbEl.innerText = (currentLang === 'bn' ? '(ক্লোজিং ব্যালেন্স: ' : '(Closing Balance: ') + formatLangCurrency(runningBalance) + ')';
+            // ✅ ক্লোজিং ব্যালেন্স = ওপেনিং − কমিশন + মোট মূল্য − ফিল্টারে বাছাই করা মাসের সম্পূর্ণ মোট পেমেন্ট
+            // (উপরের রো-লুপে পেমেন্ট শুধু তারিখ-মিল থাকলেই বিয়োগ হয়, তাই এখানে totalPayment ব্যবহার করে
+            //  পুরো মাসের সব পেমেন্ট নিশ্চিতভাবে বাদ দেওয়া হচ্ছে, ডেলিভারির তারিখের সাথে মিলুক বা না মিলুক)
+            const closingBalance = (openingBalance - totalCommission) + totalValue - totalPayment;
+            cbEl.innerText = (currentLang === 'bn' ? '(ক্লোজিং ব্যালেন্স: ' : '(Closing Balance: ') + formatLangCurrency(closingBalance) + ')';
         }
         // আউটস্ট্যান্ডিং ব্যালেন্স = ওপেনিং ব্যালেন্স + এই মাসের মোট মূল্য - পেমেন্ট - কমিশন + বর্তমান স্টক ভ্যালু
         const outEl = document.getElementById('ledger-outstanding-balance');
